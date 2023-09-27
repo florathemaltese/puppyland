@@ -66,7 +66,7 @@ Some of what we cover
 
 #### Project Due: HTML and CSS (project1)
 
-Thu Oct 19, 11:59pm PT
+Thu Oct 12, 11:59pm PT
 
 ### Section 2: Browser Javascript
 

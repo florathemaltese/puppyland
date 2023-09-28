@@ -1,0 +1,76 @@
+div {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr; 
+}
+
+header{
+  grid-column: 1/5;
+  background-color: plum;
+}
+
+.menu {
+  background-color: plum;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.menu li {
+  list-style-type: none;
+}
+
+
+.menu li a:hover {
+  color: white;
+  background-color: purple;
+}
+
+.local-menu {
+  grid-column: 1/2;
+  background-color: pink;
+  border-right: 1px solid black;
+}
+
+.local-menu ul {
+  display: flex;
+  flex-direction: column;
+}
+
+.local-menu ul li {
+  list-style-type: none;
+  padding: 20px;
+  margin: 10px 0px;
+
+}
+
+.local-menu ul li a:hover {
+  color: white;
+  background-color: purple;
+}
+
+main {
+  grid-column: 2/5;
+  padding: 20px;
+  background-color: pink;
+}
+
+footer {
+  grid-column: 1/5;
+  background-color: plum;
+  padding: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

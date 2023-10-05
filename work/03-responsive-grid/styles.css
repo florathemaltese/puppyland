@@ -1,0 +1,161 @@
+:root {
+    --pink-color: #FF69B4;
+    --blue-color: #00BFFF;
+    --bg-color: #FFE4E1;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+}
+
+header, main, footer {
+    padding: 1rem;
+    text-align: center;
+}
+
+header {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 1rem;
+    align-items: center;
+    background-color: var(--pink-color);
+    color: black;
+}
+
+.logo {
+    grid-column: 1/2;
+}
+
+h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    grid-column: 2/3;
+}
+
+nav {
+    grid-column: 1/-1;
+    width: 100%;
+    display: grid;
+}
+
+.nav-links {
+    list-style-type: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+    background-color: var(--blue-color);
+}
+
+.nav-links li {
+    text-align: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: black;
+    padding: 5px 10px;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+.nav-links a:hover {
+    background-color: var(--bg-color);
+}
+
+main h2 {
+    font-size: 2rem;
+    margin: 1rem 0;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 1rem;
+}
+
+.card {
+    grid-column: span 4;
+    border: 1px solid var(--blue-color);
+    border-radius: 10px;
+    padding: 1rem;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    background-color: white;
+}
+
+.card img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.btn-readmore {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    background-color: var(--pink-color);
+    color: white;
+    text-decoration: none;
+    align-self: end;
+}
+
+.btn-readmore:hover {
+    background-color: var(--blue-color);
+}
+
+footer {
+    background-color: var(--pink-color);
+    padding: 1rem;
+    text-align: center;
+    color: black;
+}
+
+.footer-links {
+    list-style-type: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 1rem;
+    font-size: 0.8rem;
+}
+
+.footer-links li {
+    grid-column: span 4;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: white;
+}
+
+.footer-links a:hover {
+    color: var(--blue-color);
+    text-decoration: underline;
+}
+
+@media (max-width: 50rem) {
+    .cards {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .card {
+        grid-column: span 12;
+    }
+
+    header {
+        grid-template-columns: 1fr;
+    }
+
+    .nav-links {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .footer-links {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+

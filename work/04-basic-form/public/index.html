@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Sample Page</title>
+</head>
+<body>
+
+<header>
+    <h1>Haidilao Hot Pot Seattle</h1>
+</header>
+
+<main>
+    <section class="registration-section">
+        <h2>Join waitlist</h2>
+        <p>Fields marked with an asterisk (*) are required.</p>
+        
+        <form action="/submit" method="post" class="form">
+            <div class="form__label form-group">
+                <div class="form__label--name">
+                    <label for="name">Name *</label>
+                </div>
+                <div class="form__label--blank">
+                    <input type="text" id="name" name="name" required aria-required="true">
+                </div>
+            </div>
+        
+            <div class="form__label form-group">
+                <div class="form__label--name">
+                    <label for="email">Email *</label>
+                </div>
+                <div class="form__label--blank">
+                    <input type="email" id="email" name="email" required aria-required="true">
+                </div>
+            </div>
+        
+            <div class="form__checkbox form-group">
+                <label for="annoy_me" class="checkbox-label">Do you want us to send you annoying emails?</label>
+                <input type="checkbox" id="annoy_me" name="annoy_me" checked>
+            </div>
+        
+            <div class="form__label form-group">
+                <div class="form__label--name">
+                    <label for="tier">Choose Your Tier *</label>
+                </div>
+                <div class="form__label--blank">
+                    <select id="tier" name="tier" required aria-required="true">
+                        <option value="" disabled selected>Please select</option>
+                        <option value="1">Silver Tier</option>
+                        <option value="2">Gold Tier</option>
+                        <option value="3">Platinum Tier</option>
+                    </select>
+                </div>
+            </div>
+        
+            <div class="form__button form-group">
+                <input type="submit" value="Register">
+            </div>
+        </form>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2023 Haidilao. <a href="#">Privacy Policy</a></p>
+</footer>
+
+</body>
+</html>
+

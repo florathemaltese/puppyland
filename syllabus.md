@@ -74,23 +74,25 @@ Thu Oct 12, 11:59pm PT
 - Fri Oct 13
 - Fri Oct 20
 - Fri Oct 27
-- Fri Nov 3
 
 #### Topics
 
 - Browser JS Intro
 - Validation
-- Interactive UI Components
+- Interactive UI Components (modal, accordion, etc)
+- Intro to ARIA
 
 #### Project Due: Javascript (project2)
 
-Thu Nov 9, 11:59pm PT
+Thu Nov 2, 11:59pm PT
 
 ### Section 3: React Intro
 
 #### Schedule
+- Fri Nov 3
 - Fri Nov 10
 - Fri Nov 17
+- NOT Fri Nov 24 (holiday)
 - Fri Dec 1  
 - Fri Dec 8
 
@@ -102,5 +104,5 @@ Thu Nov 9, 11:59pm PT
 - NO EXTENSIONS ON FINAL PROJECT
 Mon Dec 11, 11:59pm PT
 
-No class Fri Dec 15 (just Project due on Mon Dec 11, 11:59pm PT_DAY)
+No class Fri Dec 15 (just Project due on Mon Dec 11, 11:59pm PT)
 

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maltese Puppyland</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="page-grid"> 
+    <header>
+        <a href="index.html" class="logo-link">
+            <img src="images/logo.jpg" alt="Logo dog" class="logo">
+        </a>        
+        <h1>Maltese Puppyland</h1>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Homepage</a></li>
+                <li>
+                    <a href="about.html">About Us</a>
+                    <ul class="dropdown">
+                        <li><a href="team.html">Our Team</a></li>
+                        <li><a href="story.html">Our Story</a></li>
+                    </ul>
+                </li>
+                <li><a href="register.html">Register</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+<main>
+    <h2>Interested in our training sessions? Register here.</h2>
+    <section class="registration-section">
+        <p>Fields marked with an asterisk (*) are required.</p>
+        
+        <form action="/submit" method="post" class="form">
+            <div class="form__label form-group">
+                <div class="form__label--name">
+                    <label for="name">Name *</label>
+                </div>
+                <div class="form__label--blank">
+                    <input type="text" id="name" name="name" required aria-required="true">
+                </div>
+            </div>
+        
+            <div class="form__label form-group">
+                <div class="form__label--name">
+                    <label for="email">Email *</label>
+                </div>
+                <div class="form__label--blank">
+                    <input type="email" id="email" name="email" required aria-required="true">
+                </div>
+            </div>
+        
+            <div class="form__checkbox form-group">
+                <label for="annoy_me" class="checkbox-label">Do you want us to send you annoying emails?</label>
+                <input type="checkbox" id="annoy_me" name="annoy_me" checked>
+            </div>
+        
+            <div class="form__label form-group">
+                <div class="form__label--name">
+                    <label for="tier">Choose Your Tier *</label>
+                </div>
+                <div class="form__label--blank">
+                    <select id="tier" name="tier" required aria-required="true">
+                        <option value="" disabled selected>Please select</option>
+                        <option value="1">Silver Tier</option>
+                        <option value="2">Gold Tier</option>
+                        <option value="3">Platinum Tier</option>
+                    </select>
+                </div>
+            </div>
+        
+            <div class="form__button form-group">
+                <input type="submit" value="Register">
+            </div>
+        </form>
+    </section>
+
+    
+</main>
+
+    <footer>
+        <nav>
+            <ul class="footer-links">
+                <li><a href="sales.html">Sales</a></li>
+                <li><a href="faqs.html">FAQs</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <p>©2023 Maltese Puppyland Inc.</p>
+    </footer>
+    </div>
+</body>
+</html>

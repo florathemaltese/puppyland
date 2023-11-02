@@ -106,6 +106,10 @@ nav {
 }
 
 
+.dropdown.open {
+    display: block; 
+}
+
 
 .menu-toggle {
     display: none;
@@ -294,14 +298,11 @@ footer {
     font-size: 1rem;
     margin: 1rem;
     padding: 0.5rem;
-    width: 90%;
-}
-
-.form {
     border: 0.5rem solid white; 
     border-radius: 1rem; 
     padding: 1rem; 
 }
+
 
 .form__group {
     display: grid;
@@ -321,7 +322,7 @@ footer {
     background-color: lightcoral; 
     padding: 0.5rem 1rem; 
     cursor: pointer; 
-    border-radius: 0.375rem; 
+    border-radius: 0.5rem; 
 }
 
 .form__button input[type="submit"]:hover {
@@ -369,7 +370,7 @@ footer {
     }
 
     .form__label, .form__checkbox {
-        grid-template-columns: 1fr; // convert 2-coloum to 1-coloum
+        grid-template-columns: 1fr; 
     }
 
     .form__label--name, .form__label--blank {

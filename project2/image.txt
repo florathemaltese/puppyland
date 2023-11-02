@@ -4,3 +4,7 @@ chef.jpg
 doctor.jpg
 logo.jpg
 policeman.jpg
+pilot.jpg
+lawyer.jpg
+dancer.jpg
+

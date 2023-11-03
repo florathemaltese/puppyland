@@ -245,10 +245,20 @@ footer {
 @media (max-width: 44rem) {
     .cards {
         grid-template-columns: repeat(1, 1fr);
+        margin: 0.5rem;
     }
 
     .card {
         grid-column: span 12;
+        margin:0.5rem;
+        border: 0.05rem solid var(--nav-color);
+        box-sizing: border-box;
+    }
+
+    .card img {
+        float: left; 
+        margin-right: 1rem;
+        max-width: none; 
     }
 
     header {
@@ -392,6 +402,12 @@ footer {
         justify-content: space-between;
         align-items: center;
     }
+    .card img {
+        float: none; 
+        margin-right: 0; 
+        width: auto; 
+        max-width: 12.5rem; 
+    }
 }
 
 
@@ -431,3 +447,91 @@ footer {
     border-radius: 0.375rem;
 }
 
+
+.professionalcards .img-wrapper {
+    float: left; 
+    width: 12.5rem;
+    height: 12.5rem;
+    margin-right: 1rem;
+    margin-left: 1rem; 
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.professionalcard {
+    display: block; 
+    border-bottom: 1rem solid #ccc; 
+    overflow: auto; 
+    padding-bottom: 2rem; 
+}
+
+.professionalcard .img-wrapper img {
+    max-width: 12.5rem; 
+    max-height: 12.5rem; 
+    width: auto; 
+    height: auto; 
+    align-items: center;
+}
+
+.professionalcard.reverse {
+    flex-direction: row-reverse; 
+}
+
+.professionalcard.reverse .img-wrapper {
+    float: right;
+    margin-right: 1rem; 
+    margin-left: 1rem; 
+}
+
+
+@media (max-width: 44rem) {
+    .professionalcard,
+    .professionalcard.reverse {
+        display: flex; /* 启用flex布局 */
+        flex-direction: row; /* 子元素水平排列 */
+        justify-content: center; /* 子元素水平居中 */
+        align-items: center; /* 子元素垂直居中 */
+        border-bottom: none; /* 移除底部边框 */
+        margin-bottom: 0; /* 移除卡片间的间隙 */
+    }
+
+    .img-wrapper {
+        width: 50%; /* 图片宽度占父容器的50% */
+        height: auto; /* 高度自适应 */
+        margin: 0; /* 移除自动外边距 */
+    }
+
+    .professionalcard .content {
+        width: 50%; /* 文字内容宽度也占父容器的50% */
+        padding: 0 1rem; /* 添加内边距 */
+    }
+
+    .professionalcard.reverse .img-wrapper {
+        order: 2; /* 图片在后 */
+    }
+
+    .professionalcard.reverse .content {
+        order: 1; /* 文本内容在前 */
+    }
+
+    /* 如果需要确保图片不要太大，限制一下大小 */
+    .img-wrapper img {
+        max-width: 100%; /* 图片最大宽度为其容器的宽度 */
+        height: auto; /* 高度自适应 */
+    }
+}
+
+
+
+
+.professionalcard:nth-of-type(1) {
+    background-color: #eeeeee; 
+}
+
+.professionalcard:nth-of-type(2) {
+    background-color: papayawhip; 
+}
+
+.professionalcard:nth-of-type(3) {
+    background-color: #eee; 
+}

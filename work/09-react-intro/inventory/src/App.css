@@ -1,0 +1,58 @@
+/* Root and global styles */
+:root {
+  --shadow-color: #646cffaa;
+  --react-logo-shadow: #61dafbaa;
+  --transition-duration: 300ms;
+  --gap-size: 1.25rem; 
+  --padding-standard: 0.625rem 0.9375rem; 
+  --font-size-standard: 1.125rem; 
+  --color-muted: #888;
+  --background-color: #AFDBF5;
+}
+
+#root {
+  max-width: 80rem; 
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+body {
+  background-color: var(--background-color); 
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+/* App specific styles */
+.App {
+  padding-top: 3.125rem; 
+}
+
+/* Inventory control layout */
+.inventory-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap-size);
+}
+
+/* Inventory count margins */
+.inventory-count {
+  margin: 0 0.9375rem; 
+}
+
+/* Button styling */
+button {
+  padding: var(--padding-standard);
+  font-size: var(--font-size-standard);
+  cursor: pointer;
+}
+
+/* Disabled button state */
+button[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

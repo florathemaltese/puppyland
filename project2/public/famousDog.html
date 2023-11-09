@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maltese Puppyland</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="page-grid"> 
+    <header>
+        <a href="index.html" class="logo-link">
+            <img src="images/logo.jpg" alt="Logo dog" class="logo">
+        </a> 
+        <h1>Maltese Puppyland</h1>
+        <div class="menu-toggle" role = "button" tabindex = "0">
+            <div class="hamburger"></div>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Homepage</a></li>
+                <li>
+                    <a href="about.html">About Us</a>
+                    <ul class="dropdown">
+                        <li><a href="team.html">Our Team</a></li>
+                        <li><a href="story.html">Our Story</a></li>
+                        <li><a href="courses.html">Our Courses</a></li>
+                    </ul>
+                </li>
+                <li><a href="famousDog.html">Famous Dog</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+<main>
+    <h2>Famous Dog</h2>
+
+    <section class="cards">
+        <article class="card">
+            <div class="img-wrapper">
+                <img src="images/lawyer.jpg" alt="Maltese Image">
+            </div>
+            <h3>Lawyer Fluffy</h3>
+            <p>Lawyer Fluffy, the Maltese puppy, strutted into the courtroom with his tiny briefcase, drawing smiles from even the sternest of judges. Everyone underestimated him due to his adorable appearance, but his bark in the courtroom was as powerful as any growl, winning cases left and right. In the end, Fluffy was not only the town's favorite puppy but also its most trusted legal expert.</p>
+            <a href="#" class="btn-subscribe">Subscribe</a>
+            <a href="#" class="btn-readmore">Read More</a>
+        </article>
+        
+        <article class="card">
+            <div class="img-wrapper">
+                <img src="images/pilot.jpg" alt="Maltese Image">
+            </div>
+            <h3>Pilot Barkley</h3>
+            <p>In the quaint town of Airville, Pilot Barkley, the tiny Maltese puppy, was known to fly paper planes larger than himself, leaving trails of joy and amazement behind. Each day, with his leather cap and goggles, he'd embark on thrilling adventures, collecting cloud tufts for the town's children. No sky was too vast, no wind too strong, for the indomitable spirit of Pilot Barkley.</p>
+            <a href="#" class="btn-subscribe">Subscribe</a>
+            <a href="#" class="btn-readmore">Read More</a>
+        </article>
+        
+        <article class="card">
+            <div class="img-wrapper">
+                <img src="images/dancer.jpg" alt="Maltese Image">
+            </div>
+            <h3>Dancer Snowball</h3>
+            <p>In the heart of Winterfell, Dancer Snowball, the Maltese puppy, twirled and leaped, leaving delicate paw prints in the snow. Each evening, under the shimmering northern lights, she'd perform enchanting routines that seemed to make the snowflakes dance along with her. The townsfolk believed her magical ballets were the secret behind the town's everlasting winter wonderland.</p>
+            <a href="#" class="btn-subscribe">Subscribe</a>
+            <a href="#" class="btn-readmore">Read More</a>
+        </article>
+
+        <div class="modal" id="subscribeModal"> 
+            <div class="modal-content">
+                <button class="close-btn">Cancel</button>
+                
+                <div> 
+                    <h2>Interested in our training sessions? Register here.</h2>
+                    <section class="registration-section">
+                        <p>Fields marked with an asterisk (*) are required.</p>
+                        
+                        <form action="/register" method="post" class="form">
+                            <form action="/register" method="post" class="form">
+                                <!-- Name input field -->
+                                <div class="form__label form-group">
+                                    <label for="name">Name *</label>
+                                    <input type="text" id="name" name="name">
+                                    <span class="error" id="nameError">Warning! Name is required!</span>
+                                </div>
+                            
+                                <!-- Email input field -->
+                                <div class="form__label form-group">
+                                    <label for="email">Email *</label>
+                                    <input type="text" id="email" name="email">
+                                    <span class="error" id="emailError">Warning! Email is required!</span>
+                                    <span class="error" id="emailFormatError">Warning! Email address should include "@" !</span>
+                                    <span class="error" id="emailWarning"></span>
+                                </div>
+                                
+
+                                <!-- Confirm Email input field -->
+                                <div class="form__label form-group">
+                                    <label for="confirmEmail">Confirm Email *</label>
+                                    <input type="text" id="confirmEmail" name="confirmEmail">
+                                    <span class="error" id="confirmEmailError">Warning! Confirm email does not match!</span>
+                                </div>
+                    
+                                <!-- Checkbox for opting for spam -->
+                                <div class="form__checkbox form-group">
+                                    <label class="checkbox__label" for="wants-spam">Do you want spam?</label>
+                                    <input class="checkbox__input" type="checkbox" id="wants-spam" name="wants-spam">
+                                </div>
+                            
+                                <!-- Select menu for tier selection -->
+                                <div class="form__label form-group">
+                                    <label for="tier">Choose Your Tier</label>
+                                    <select id="tier" name="tier">
+                                        <option value="" disabled selected>Please select</option>
+                                        <option value="silver">Silver Tier</option>
+                                        <option value="gold">Gold Tier</option>
+                                        <option value="platinum">Platinum Tier</option>
+                                    </select>
+                                </div>
+                                
+                                <!-- Submit button -->
+                                <div class="form__button form-group">
+                                    <input type="submit" value="Register">
+                                </div>
+                                </form>
+                        </form>
+                    </section>
+                </div> 
+            </div>
+        </div> 
+
+        
+    </section>
+    <script src="hamburger.js"></script> 
+    <script src="dropdownMenuHandler.js"></script> 
+    <script src="registrationHandler.js"></script>
+</main>
+
+    <footer>
+        <nav>
+            <ul class="footer-links">
+                <li><a href="sales.html">Sales</a></li>
+                <li><a href="faqs.html">FAQs</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <p>©2023 Maltese Puppyland Inc.</p>
+    </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,580 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.light {
+  --background-color: #ffffff;
+  --text-color: #333333;;
+  --card-text-color: #333333;
+  --card-background-color: #f8f9fa;
+  --link-color: #1a76d2;
+  --professionalcard-background-color: #ffffff; 
+  --professionalcard-text-color: #333333; 
+  --professionalcard-border-color: #ddd; 
+  --card1-bg-color: #f0f8ff; 
+  --card2-bg-color: #fff0f5; 
+  --card3-bg-color: #f0fff0;
+
+}
+
+.dark {
+  --background-color: #010048;
+  --text-color: 	#e0e0e0;
+  --card-text-color: #e0e0e0;
+  --card-background-color: #1e1e1e; 
+  --link-color: #bb86fc;
+  --professionalcard-background-color: #1e1e1e; 
+  --professionalcard-text-color: #e0e0e0; 
+  --professionalcard-border-color: #333333; 
+  --card1-bg-color: #123456; 
+  --card2-bg-color: #654321; 
+  --card3-bg-color: #123456;
+}
+
+body.light {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+body.dark {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.logo {
+  grid-column: 1/2;
+  width: 6.25rem;
+  height: 6.25rem;
+  
+}
+
+
+.app-container, .page-container {
+  width: 100%; 
+  overflow: hidden; 
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0 1rem;
+  display: flex;
+  place-items: center;
+  min-width: 20rem;
+  flex-direction: column;
+  min-height: 55vh;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+main {
+  flex: 1; 
+}
+
+h1 {
+  font-size: 1.5rem;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 0.5rem;
+  border: 0.063rem solid transparent;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+button:hover {
+  border-color: #646cff;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 0.25rem auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+
+  a:hover {
+    color: #747bff;
+  }
+
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; 
+  gap: 1.25rem;
+  margin: 1.25rem 0;
+}
+
+.card {
+  flex: 1;
+  border: 0.063rem solid #ddd;
+  border-radius: 0.625rem;
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+  background-color: var(--card-background-color);
+  color: var(--card-text-color);
+}
+
+
+.card:hover {
+  transform: translateY(-0.313rem);
+}
+
+.img-wrapper {
+  width: 12.5rem;
+  height: 12.5rem;
+  overflow: hidden;
+}
+
+.img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card h3 {
+  font-size: 1.2rem;
+  margin: 0.625rem;
+}
+
+.card p {
+  padding: 0 0.625rem;
+  text-align: justify;
+}
+
+.btn-readmore {
+  display: inline-block;
+  padding: 0.625rem 0.938rem;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 0.313rem;
+  margin: 0.625rem;
+  text-align: center;
+}
+
+.btn-readmore:hover {
+  background-color: #0056b3;
+}
+
+.professionalcards {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.professionalcard {
+  display: flex;
+  align-items: center;
+  border: 0.063rem solid #ddd;
+  border-radius: 0.625rem;
+  overflow: hidden;
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+  background-color: var(--professionalcard-background-color);
+  border: 0.1rem solid var(--professionalcard-border-color);
+}
+
+.img-wrapper {
+  width: 20rem;
+  height: 20rem;
+}
+
+
+
+.content {
+  padding: 0.938rem;
+  width: 60%;
+}
+
+.reverse {
+  flex-direction: row-reverse;
+}
+
+.card1 {
+  background-color: var(--card1-bg-color);
+}
+
+.card2 {
+  background-color: var(--card2-bg-color);
+}
+
+.card3 {
+  background-color: var(--card3-bg-color);
+}
+
+header {
+  background-color: #f8f9fa;
+  padding: 0.625rem 1.25rem;
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo {
+  height: 3.125rem;
+  width: 3.125rem;
+  margin-right: 0.938rem;
+}
+
+header h1 {
+  margin: 0;
+  color: #333;
+  font-size: 1.5rem;
+}
+
+footer {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  background-color: #f8f9fa;
+  padding: 1.25rem;
+  box-shadow: 0 -0.125rem 0.25rem rgba(0, 0, 0, 0.1);
+  color: black;
+  flex: none;
+
+}
+
+.footer-links {
+  list-style-type: none;
+  padding: 0;
+  margin: 0 0 0.625rem 0;
+  display: inline-flex;
+  gap: 0.938rem;
+}
+
+.footer-links li {
+  display: inline;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+/* General Modal Styles */
+dialog {
+  border: none;
+  border-radius: 1rem;
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  width: auto;
+  flex: none;
+  max-width: 20rem；
+}
+
+/* Form Styles */
+.form {
+  display: flex;
+  flex-direction: column;
+  max-width: 40rem; 
+  margin: 2rem auto;
+  padding: 1rem;
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1); 
+  border-radius: 1rem; 
+  background-color: pink; 
+}
+
+.form__label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.form-group {
+  margin-bottom: 2rem;
+  width: 50%; 
+}
+
+input[type="text"],
+input[type="email"], 
+select {
+  padding: 0.5rem;
+  border: 0.1rem solid #ccc; 
+  border-radius: 1rem; 
+  font-size: 1rem;
+  color: #333; 
+}
+
+input[type="submit"] {
+  padding: 0.5rem;
+  border: none; 
+  border-radius: 0.25rem;
+  background-color: #646cff; 
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s; 
+}
+
+input[type="submit"]:hover {
+  background-color: #535bf2; 
+}
+
+
+
+/* Error Message Styles */
+.error {
+  color: red;
+  font-size: 0.8rem;
+}
+
+/* Button Adjustments for the Modal */
+button {
+  align-self: flex-end; 
+}
+
+/* Standard button styles */
+.standard-button {
+  background-color: #007bff; 
+  color: white;
+  border: none;
+  padding: 1rem 1.5rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.standard-button:hover {
+  background-color: #0056b3; 
+}
+
+.standard-button:active {
+  background-color: #004085; 
+}
+
+/* Link-style button styles */
+.link-button {
+  background: none;
+  border: none;
+  color: #007bff;
+  text-decoration: underline;
+  padding: 0.25rem;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.link-button:hover {
+  color: #0056b3; 
+}
+
+.link-button:active {
+  color: #004085; 
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav a {
+  text-decoration: none; 
+  margin: 0 1rem; 
+}
+.nav-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-list li {
+  position: relative;
+  padding: 0.5rem 1rem;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  min-width: 10rem;
+}
+
+.dropdown-content li {
+  padding: 0.5rem 1rem;
+  text-align: left;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content li:hover {
+  background-color: #ddd;
+}
+
+
+
+@media screen and (max-width: 48rem) {
+  .card, .professionalcard {
+    flex-direction: column; 
+    width: 100%; 
+  }
+
+  .cards, .professionalcards {
+    flex-direction: column; 
+    padding: 0 1rem; 
+  }
+
+  .img-wrapper {
+    width: 100%; 
+    height: auto; 
+  }
+
+  header, footer {
+    flex-direction: column; 
+    padding: 1rem; 
+  }
+
+  .content {
+    padding: 1rem; 
+  }
+}
+
+.skiplink {
+  position: absolute;
+  top: -3rem; 
+  left: 0;
+  background: #000;
+  color: white;
+  padding: 0.5rem;
+  z-index: 100;
+}
+
+.skiplink:focus {
+  top: 0; 
+}
+
+
+.hamburger {
+  display: none;
+  width: 2rem;
+  height: 0.25rem;
+  background-color: #eeeeee;
+  position: relative;
+  cursor: pointer;
+}
+
+.hamburger::before,
+.hamburger::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #eeeeee;
+  transition: all 0.3s;
+}
+
+.hamburger::before {
+  top: -0.5rem;
+}
+
+.hamburger::after {
+  bottom: -0.5rem;
+}
+
+
+.nav-list {
+  display: flex; 
+  list-style-type: none; 
+
+}
+
+
+@media screen and (max-width: 48rem) {
+  .hamburger {
+    display: block; 
+  }
+
+  .nav-list {
+    display: none; 
+  }
+
+  .nav-list.active {
+    display: block; 
+  }
+}
+
+.carousel {
+  width: 20rem;
+  height: 20rem;
+  margin: 0 auto; 
+  position: relative;
+}
+
+.carousel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+}
+.carousel-dots {
+  position: absolute;
+  bottom: 0.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+
+.dot {
+  height: 0.5rem;
+  width: 0.5rem;
+  margin: 0 0.25rem;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: #717171;
+}
+
+.accordion-toggle {
+  margin-left: 10px; /* 在箭头和标题之间添加一些间距 */
+  font-size: 1.2em; /* 调整箭头的大小 */
+  /* 你可以添加更多样式，比如颜色、过渡效果等 */
+}
